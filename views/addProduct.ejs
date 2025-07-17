@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Add Product</title>
+  <style>
+    body {
+      font-family: 'Playfair Display', serif;
+      max-width: 500px;
+      margin: 50px auto;
+      background: #fff8f0;
+      color: #5a3e2b;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px #d2b48c;
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: 600;
+    }
+    input[type="text"], textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 6px;
+      border: 1px solid #c9a66b;
+      border-radius: 6px;
+      font-family: 'Playfair Display', serif;
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px 15px;
+      background-color: #8b5e3c;
+      border: none;
+      color: white;
+      font-weight: 700;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #a16f46;
+    }
+  </style>
+</head>
+<body>
+  <h1>Add a New Handmade Product</h1>
+  <form action="/products" method="POST">
+    <label for="name">Product Name</label>
+    <input type="text" id="name" name="name" required />
+
+    <label for="description">Description</label>
+    <textarea id="description" name="description" rows="4"></textarea>
+
+    <label for="price">Price (USD)</label>
+    <input type="text" id="price" name="price" />
+
+    <label for="image">Image URL</label>
+    <input type="text" id="image" name="image" />
+
+    <button type="submit">Add Product</button>
+  </form>
+</body>
+</html>
